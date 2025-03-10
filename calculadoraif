@@ -1,3 +1,10 @@
+#!/bin/bash
+echo "digite um numemero"
+read numero;
+echo "digite outro numero"
+read numero_2;
+
+
 echo "escolha uma opcao"
 echo "1 - multiplica"
 echo "2 - soma"
@@ -5,16 +12,16 @@ echo "3 - divisao"
 echo "4 - subtracao"
 echo -n "Selecionado:"
 read opcao;
-if [ $opcao == "1" ];
+if [ $opcao == "1" ]; then
 multiplica=$(($numero * $numero_2))
 echo "$multiplica"
-elif  $opcao == "2" ];
+elif  [ $opcao == "2" ]; then
 soma=$(($numero + $numero_2))
 echo "$soma"
-elif  $opcao == "3" ];
+elif  [ $opcao == "3" ]; then
 divisao=$(($numero / $numero_2))
 echo "$divisao"
-elif  $opcao == "4" ];
+elif  [ $opcao == "4" ]; then
 subtracao=$(($numero - $numero_2))
 echo "$subtracao"
 fi
