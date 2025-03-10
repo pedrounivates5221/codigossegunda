@@ -1,0 +1,24 @@
+echo "escolha uma opcao"
+echo "1 - multiplica"
+echo "2 - soma"
+echo "3 - divisao"
+echo "4 - subtracao"
+echo -n "Selecionado:"
+read opcao;
+case $opcao in
+"1")
+multiplica=$(($numero * $numero_2))
+echo "$multiplica"
+;;
+"2")
+soma=$(($numero + $numero_2))
+echo "$soma"
+;;
+"3")
+divisao=$(($numero / $numero_2))
+echo "$divisao
+;;
+"4")
+subtracao=$(($numero - $numero_2))
+echo "$subtracao"
+;;
