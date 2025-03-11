@@ -1,3 +1,8 @@
+#!/bin/bash
+echo "digite um numemero"
+read numero;
+echo "digite outro numero"
+read numero_2;
 echo "escolha uma opcao"
 echo "1 - multiplica"
 echo "2 - soma"
@@ -16,9 +21,11 @@ echo "$soma"
 ;;
 "3")
 divisao=$(($numero / $numero_2))
-echo "$divisao
+echo "$divisao"
 ;;
 "4")
 subtracao=$(($numero - $numero_2))
 echo "$subtracao"
 ;;
+
+esac
