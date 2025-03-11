@@ -1,0 +1,121 @@
+#!/bin/bash
+
+calculadora_case(){
+
+echo "digite um numero"
+read numero1;
+echo "digite um segundo numero"
+read numero2;
+echo "escolha o que você quer fazer com a conta?"
+echo "1 - multiplicar"
+echo "2 - somar"
+echo "3 - dividir"
+echo "4 - subtrair"
+echo - "escolha sua opção:"
+read opcao2;
+case $opcao2 in
+"1")
+result1=$(($numero1*$numero2))
+echo "seu resultado é $result1"
+;;
+"2")
+result2=$(($numero1+$numero2))
+echo "seu resultado é $result2"
+;;
+"3")
+result3=$(($numero1/$numero2))
+echo "seu resultado é $result3"
+;;
+"4")
+result4=$(($numero1-$numero2))
+echo "seu resultado é $result4"
+;;
+esac
+}
+
+calculadora_if(){
+
+echo "digite um numero"
+read numero1;
+echo "digite um segundo numero"
+read numero2;
+echo "escolha o que você quer fazer com a conta?"
+echo "1 - multiplicar"
+echo "2 - somar"
+echo "3 - dividir"
+echo "4 - subtrair"
+read opcao1;
+
+if [ $opcao1 == "1" ];
+then
+result1=$(($numero1*$numero2))
+echo "seu resultado é $result1f"
+
+elif [ $opcao1 == "2" ];
+then 
+result2=$(($numero1+$numero2))
+echo "seu resultado é $result2"
+
+elif [ $opcao1 == "3" ];
+result3=$(($numero1/$numero2))
+then
+echo "seu resultado é $result3"
+
+elif [ $opcao1 == "4" ]
+result4=$(($numero1-$numero2))
+then
+echo "seu resultado é $result4"
+fi
+}
+
+
+
+fatorial_while(){
+
+echo "digite um numero e veja seu fatorial"
+read numero1;
+i=1;
+fat=1;
+while [ $i -le $numero1 ];do
+fat=$(($fat*$i))
+i=$(($i+1))
+echo "seu fatorial de $numero1 é $fat"
+done
+}
+
+fatorial_for(){
+
+echo "digite um numero e veja seu fatorial"
+read num;
+fatorial=1;
+for ((i=1; i<=num; i++));do
+fatorial=$((fatorial*i))
+echo "seu fatorial de $num é $fatorial"
+done 
+}
+
+echo "escolha a opção desejada:"
+echo "1.calculadora baseada em FI"
+echo "2.calculadora com sua base em case"
+echo "3.Uma forma de calcular o fatorial com o FOR"
+echo "4.Uma forma de calcular o fatorial com o WHILE"
+read opcao
+echo "Qual opção você deseja:"
+
+case "$opcao" in
+1)
+calculadora_if
+;;
+2)
+calculadora_case
+;;
+3)
+fatorial_for
+;;
+4)
+fatorial_while
+;;
+*)
+echo "opcao não encontrada, tente novamente"
+;;
+esac
