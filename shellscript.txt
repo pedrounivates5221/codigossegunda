@@ -3,11 +3,14 @@ echo "digite um numemero"
 read numero;
 echo "digite outro numero"
 read numero_2;
+contador=1
+fat=1
 echo "escolha uma opcao"
 echo "1 - multiplica"
 echo "2 - soma"
 echo "3 - divisao"
 echo "4 - subtracao"
+echo "5 - fatorial"
 echo -n "Selecionado:"
 read opcao;
 case $opcao in
@@ -26,6 +29,15 @@ echo "$divisao"
 "4")
 subtracao=$(($numero - $numero_2))
 echo "$subtracao"
+;;
+"5")
+while [ $contador -le $numero ]; do
+fat=$(($fat * $contador))
+contador=$((contador + 1))
+
+
+echo "$fat"
+done
 ;;
 
 esac
